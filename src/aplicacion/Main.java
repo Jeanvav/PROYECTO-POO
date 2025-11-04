@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println("=== Bienvenido al Sistema de Recordatorio de Medicamentos y Citas Médicas ===");
 
-        // 1️⃣ Registro de usuario
+        // Registro de usuario
         System.out.print("\nIngrese su nombre: ");
         String nombre = sc.nextLine();
         System.out.print("Ingrese su edad: ");
@@ -29,7 +29,7 @@ public class Main {
         Usuario usuario = new Usuario(nombre, edad, correo, telefono);
         System.out.println(usuario);
 
-        // 2️⃣ Registro de medicamentos
+        // Registro de medicamentos
         List<Medicamento> medicamentos = new ArrayList<>();
         System.out.print("\n¿Cuántos medicamentos desea registrar?: ");
         int n = sc.nextInt();
@@ -46,7 +46,7 @@ public class Main {
             medicamentos.add(new Medicamento(nom, dosis, frecuencia));
         }
 
-        // 3️⃣ Registro de una cita médica
+        // Registro de una cita médica
         System.out.print("\n¿Desea registrar una cita médica? (s/n): ");
         char op = sc.next().toLowerCase().charAt(0);
         sc.nextLine();
@@ -60,12 +60,12 @@ public class Main {
             cita = new CitaMedica(esp, med, LocalDateTime.now().plusSeconds(10));
         }
 
-        // 4️⃣ Mostrar resumen
+        // Mostrar resumen
         System.out.println("\n--- RESUMEN DE REGISTROS ---");
         medicamentos.forEach(System.out::println);
         if (cita != null) System.out.println(cita);
 
-        // 5️⃣ Simular recordatorios automáticos
+        // Simular recordatorios automáticos
         for (Medicamento m : medicamentos) {
             Recordatorio r = new Recordatorio("Tomar " + m.getNombre(), LocalDateTime.now().plusSeconds(5));
             programador.programarRecordatorio(r, servicio, 5);
