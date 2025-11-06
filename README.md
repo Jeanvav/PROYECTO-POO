@@ -64,7 +64,7 @@ Proyecto POO.iml
     * Registrar medicamentos.
     * Registrar una cita médica (opcional).
     * Visualizar los recordatorios simulados.
-## 🧪 Ejemplo de uso en consola
+##  Ejemplo de uso en consola
 
 ```bash
 Bienvenido al sistema de recordatorios médicos
