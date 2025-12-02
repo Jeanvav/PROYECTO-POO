@@ -9,27 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b920d87-5cc3-44b9-9d70-e9443537b1b6" name="Changes" comment="Entrega Final-Proyecto POO">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/proyecto_poo_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2b920d87-5cc3-44b9-9d70-e9443537b1b6" name="Changes" comment="Entrega Final-Proyecto POO v.2.0">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestion_salud.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectopoo/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectopoo/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/CitaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/CitaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/HistorialDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/HistorialDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/MedicamentoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/MedicamentoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectopoo/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proyectopoo/database/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proyectopoo/database/ConexionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectopoo/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectopoo/app/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/CitaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/CitaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/HistorialDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/HistorialDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/MedicamentoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/MedicamentoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/UsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectopoo/dao/UsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/proyectopoo/database/ConexionDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/proyectopoo/database/ConexionDB.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764652579068</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Entrega Final-Proyecto POO v.2.0">
+      <option name="closed" value="true" />
+      <created>1764692455346</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764692455346</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,7 +178,8 @@
     <MESSAGE value="Segunda Entrega-Prototipo de Aplicación 04/11/2025" />
     <MESSAGE value="Segunda entrega proyecto POO - Prototipo 1" />
     <MESSAGE value="Entrega Final-Proyecto POO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entrega Final-Proyecto POO" />
+    <MESSAGE value="Entrega Final-Proyecto POO v.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Entrega Final-Proyecto POO v.2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

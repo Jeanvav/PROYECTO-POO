@@ -33,19 +33,40 @@ Esta versión corresponde al **Prototipo 2 (Entrega 2)** del proyecto, que inclu
 ## Estructura del proyecto
 
 ```plaintext
-src/
-├── aplicacion/
-│   └── Main.java
-└── modelo/
-    ├── Usuario.java
-    ├── Medicamento.java
-    ├── CitaMedica.java
-    ├── Recordatorio.java
-    ├── Programador.java
-    └── ServicioNotificaciones.java
-.gitignore
-README.md
-Proyecto POO.iml
+.
+├── src/
+│   └── main/
+│       └── java/
+│           └── com.proyectopoo/
+│               ├── app/
+│               │   └── Main.java
+│               ├── dao/
+│               │   ├── CitaDAO.java
+│               │   ├── HistorialDAO.java
+│               │   ├── MedicamentoDAO.java
+│               │   └── UsuarioDAO.java
+│               ├── database/
+│               │   └── ConexionDB.java
+│               ├── model/
+│               │   ├── Cita.java
+│               │   ├── Medicamento.java
+│               │   ├── Recordatorio.java
+│               │   ├── RegistroHistorial.java
+│               │   └── Usuario.java
+│               ├── service/
+│               │   └── ServicioNotificacion.java
+│               └── ui/
+│                   ├── DialogoCita.java
+│                   ├── DialogoMedicamento.Sjava
+│                   ├── VentanaAcceso.java
+│                   └── VentanaPrincipal.java
+├── resources/
+├── target/
+├── .gitignore
+├── gestion_salud.db
+├── pom.xml
+├── PROYECTO_POO.iml
+└── README.md
 ```
 ##  Requisitos del sistema
 - **Java JDK 17 o superior**
