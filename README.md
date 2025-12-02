@@ -1,4 +1,4 @@
-# Sistema de Recordatorio de Medicamentos y Citas Médicas — Entrega 2
+# Sistema de Recordatorio de Medicamentos y Citas Médicas — Entrega Final
 
 **Equipo de desarrollo:**
 * Hare Atehortua
