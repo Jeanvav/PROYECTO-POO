@@ -6,7 +6,6 @@
 * Juan Pablo Ovalle
 * Yurley Avendaño
 * Kevin González
-* Dayann Urbina
 * Jean Vargas
 
 ---
