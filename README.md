@@ -52,36 +52,21 @@ Proyecto POO.iml
 - **IntelliJ IDEA** (Community o Ultimate)
 - Sistema operativo Windows, Linux o macOS
 
-## Cómo ejecutar el proyecto
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/Jeanvav/Proyecto-POO](https://github.com/Jeanvav/Proyecto-POO)
-    ```
-2.  **Abrir el proyecto** con IntelliJ IDEA.
-3.  **Compilar el código** y ejecutar la clase `aplicacion.Main`.
-4.  **Seguir las instrucciones en consola:**
-    * Ingresar los datos del usuario.
-    * Registrar medicamentos.
-    * Registrar una cita médica (opcional).
-    * Visualizar los recordatorios simulados.
-## 🧪 Ejemplo de uso en consola
+## ⬇️ 1. Descarga y Uso (Usuarios Finales)
 
-```bash
-Bienvenido al sistema de recordatorios médicos
-Ingrese su nombre: Juan Pérez
-Ingrese su correo: juanperez@mail.com
-Ingrese su teléfono: 3214567890
+Para utilizar la aplicación sin tener que compilar el código:
 
-¿Cuántos medicamentos desea registrar?: 1
-Nombre del medicamento: Losartán
-Dosis: 50 mg
-Frecuencia (horas): 12
+### Requisito
+* **Java Runtime Environment (JRE):** El usuario debe tener instalado Java 17 o superior para poder ejecutar el archivo `.jar`.
 
-¿Desea registrar una cita médica? (s/n): s
-Especialidad: Cardiología
-Nombre del médico: Dr. Gómez
-Fecha y hora (yyyy-MM-dd HH:mm): 2025-11-06 18:30
+### 📥 Descarga del Ejecutable
 
-Usuario y datos guardados correctamente.
-Recordatorio: Tomar Losartán
-Recordatorio: Cita médica próxima: Cardiología con Dr. Gómez el 06/11/2025 18:30
+1.  Dirígete a la sección de **[Releases/Lanzamientos]** de este repositorio en GitHub.
+2.  Descarga el archivo ejecutable más reciente, que será un archivo **`.jar`** (ej: `GestionSaludApp.jar`).
+
+### 🚀 Ejecución
+
+1.  Guarda el archivo `.jar` en una carpeta de tu PC.
+2.  Haz doble clic en el archivo `GestionSaludApp.jar`.
+3.  Si Java está configurado correctamente, la aplicación se iniciará inmediatamente.
+4.  La base de datos `gestion_salud.db` se creará automáticamente junto al archivo `.jar` la primera vez que se ejecute.
