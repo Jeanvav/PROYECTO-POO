@@ -16,7 +16,8 @@ public class HistorialDAO {
     public boolean registrarEvento(RegistroHistorial registro) {
         String sql = "INSERT INTO historial (usuario_id, tipo_evento, descripcion, fecha_hora) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, registro.getUsuarioId());
@@ -38,9 +39,12 @@ public class HistorialDAO {
      */
     public List<RegistroHistorial> obtenerHistorial(int usuarioId) {
         List<RegistroHistorial> historial = new ArrayList<>();
-        String sql = "SELECT id, tipo_evento, descripcion, fecha_hora FROM historial FROM historial WHERE usuario_id = ? ORDER BY fecha_hora DESC";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN DE LA CONSULTA SQL: Eliminada la duplicación "FROM historial"
+        String sql = "SELECT id, usuario_id, tipo_evento, descripcion, fecha_hora FROM historial WHERE usuario_id = ? ORDER BY fecha_hora DESC";
+
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, usuarioId);
@@ -49,7 +53,7 @@ public class HistorialDAO {
             while (rs.next()) {
                 RegistroHistorial registro = new RegistroHistorial();
                 registro.setId(rs.getInt("id"));
-                registro.setUsuarioId(usuarioId);
+                registro.setUsuarioId(rs.getInt("usuario_id")); // Obtenido del RS para mayor seguridad
                 registro.setTipoEvento(rs.getString("tipo_evento"));
                 registro.setDescripcion(rs.getString("descripcion"));
                 // Convertir String de vuelta a LocalDateTime

@@ -16,7 +16,8 @@ public class Main {
     public static void main(String[] args) {
 
         // 1. Inicialización de la base de datos (CRÍTICO)
-        ConexionDB.inicializarTablas();
+        // Llamar a getConnection() es suficiente para crear la DB y las tablas (gracias a la lógica interna)
+        ConexionDB.getConnection();
 
         // 2. Establecer el tema visual inicial
         setTema(temaOscuro);
@@ -39,7 +40,6 @@ public class Main {
                 // CORREGIDO: Usar FlatLightLaf
                 UIManager.setLookAndFeel(new FlatLightLaf());
             }
-            // NO se llama a updateComponentTreeUI aquí, se hace desde VentanaPrincipal
         } catch (Exception ex) {
             System.err.println("Fallo al inicializar Look and Feel: " + ex);
         }

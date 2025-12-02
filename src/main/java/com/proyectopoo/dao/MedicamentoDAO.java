@@ -15,7 +15,8 @@ public class MedicamentoDAO {
     public void insertarMedicamento(Medicamento med) {
         String sql = "INSERT INTO medicamentos (usuario_id, nombre, dosis, frecuencia_horas, stock, proxima_toma) VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, med.getUsuarioId());
@@ -39,7 +40,8 @@ public class MedicamentoDAO {
         String sql = "SELECT * FROM medicamentos WHERE usuario_id = ?";
         List<Medicamento> medicamentos = new ArrayList<>();
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, usuarioId);
@@ -74,7 +76,8 @@ public class MedicamentoDAO {
         // 2. SQL: Reducir stock en 1 y actualizar la próxima toma
         String sql = "UPDATE medicamentos SET stock = stock - 1, proxima_toma = ? WHERE id = ? AND stock > 0";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, nuevaProximaToma.toString());
@@ -97,7 +100,8 @@ public class MedicamentoDAO {
      */
     public boolean verificarStockBajo(int medicamentoId, int umbral) {
         String sql = "SELECT stock FROM medicamentos WHERE id = ?";
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, medicamentoId);
@@ -118,7 +122,8 @@ public class MedicamentoDAO {
     public void eliminarMedicamento(int medicamentoId) {
         String sql = "DELETE FROM medicamentos WHERE id = ?";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, medicamentoId);

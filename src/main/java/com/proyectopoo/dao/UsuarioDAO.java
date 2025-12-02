@@ -13,7 +13,8 @@ public class UsuarioDAO {
         // SQL actualizado con modo_alerta
         String sql = "INSERT INTO usuarios (nombre, email, password, modo_alerta) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, usuario.getNombre());
@@ -24,7 +25,7 @@ public class UsuarioDAO {
             return true;
 
         } catch (SQLException e) {
-            // El error más común es email duplicado (UNIQUE)
+            System.err.println("Error al registrar usuario: " + e.getMessage());
             return false;
         }
     }
@@ -33,7 +34,8 @@ public class UsuarioDAO {
         Usuario usuario = null;
         String sql = "SELECT id, nombre, email, password, modo_alerta FROM usuarios WHERE email = ? AND password = ?";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, email);
@@ -62,7 +64,8 @@ public class UsuarioDAO {
         // SQL actualizado para seleccionar modo_alerta
         String sql = "SELECT id, nombre, email, password, modo_alerta FROM usuarios WHERE id = ?";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, id);
@@ -88,7 +91,8 @@ public class UsuarioDAO {
         // SQL actualizado para incluir modo_alerta
         String sql = "UPDATE usuarios SET nombre = ?, email = ?, password = ?, modo_alerta = ? WHERE id = ?";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, usuario.getNombre());

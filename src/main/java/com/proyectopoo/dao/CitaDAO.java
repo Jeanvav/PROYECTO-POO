@@ -16,13 +16,14 @@ public class CitaDAO {
         // SQL con 5 placeholders para los campos: usuario_id, especialidad, medico, centro_medico, fecha_hora
         String sql = "INSERT INTO citas (usuario_id, especialidad, medico, centro_medico, fecha_hora) VALUES (?, ?, ?, ?, ?)";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, cita.getUsuarioId());
             pstmt.setString(2, cita.getEspecialidad());
             pstmt.setString(3, cita.getMedico());
-            pstmt.setString(4, cita.getCentroMedico()); // <--- POSICIÓN ACTUALIZADA
+            pstmt.setString(4, cita.getCentroMedico());
             pstmt.setString(5, cita.getFechaHora().toString());
             pstmt.executeUpdate();
 
@@ -38,7 +39,8 @@ public class CitaDAO {
         String sql = "SELECT * FROM citas WHERE usuario_id = ? AND fecha_hora > ? ORDER BY fecha_hora ASC";
         List<Cita> citas = new ArrayList<>();
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, usuarioId);
@@ -51,7 +53,7 @@ public class CitaDAO {
                 cita.setUsuarioId(rs.getInt("usuario_id"));
                 cita.setEspecialidad(rs.getString("especialidad"));
                 cita.setMedico(rs.getString("medico"));
-                cita.setCentroMedico(rs.getString("centro_medico")); // <--- RECUPERACIÓN ACTUALIZADA
+                cita.setCentroMedico(rs.getString("centro_medico"));
                 cita.setFechaHora(LocalDateTime.parse(rs.getString("fecha_hora")));
                 citas.add(cita);
             }
@@ -68,7 +70,8 @@ public class CitaDAO {
     public void eliminarCita(int citaId) {
         String sql = "DELETE FROM citas WHERE id = ?";
 
-        try (Connection conn = ConexionDB.conectar();
+        // CORRECCIÓN: Usar getConnection()
+        try (Connection conn = ConexionDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, citaId);

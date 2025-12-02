@@ -62,11 +62,11 @@ Para utilizar la aplicación sin tener que compilar el código:
 ### 📥 Descarga del Ejecutable
 
 1.  Dirígete a la sección de **[Releases/Lanzamientos]** de este repositorio en GitHub.
-2.  Descarga el archivo ejecutable más reciente, que será un archivo **`.jar`** (ej: `GestionSaludApp.jar`).
-
+2.  Descarga el archivo ejecutable más reciente, que será un archivo **`.jar`** (`proyecto-poo.jar`).
+3.  Descarga el archivo iniciar.bat
 ### 🚀 Ejecución
 
-1.  Guarda el archivo `.jar` en una carpeta de tu PC.
-2.  Haz doble clic en el archivo `GestionSaludApp.jar`.
+1.  Guarda el archivo `.jar` y el archivo `.bat` en una carpeta de tu PC.
+2.  Haz doble clic en el archivo `inicar.bat`.
 3.  Si Java está configurado correctamente, la aplicación se iniciará inmediatamente.
 4.  La base de datos `gestion_salud.db` se creará automáticamente junto al archivo `.jar` la primera vez que se ejecute.
