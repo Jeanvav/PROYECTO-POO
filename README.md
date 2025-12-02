@@ -15,7 +15,7 @@ Aplicación de consola desarrollada en **Java (Programación Orientada a Objetos
 
 El propósito del sistema es mejorar el cumplimiento de tratamientos y la asistencia a citas médicas, especialmente entre adultos mayores o pacientes con enfermedades crónicas.
 
-Esta versión corresponde al **Prototipo 2 (Entrega 2)** del proyecto, que incluye las historias de usuario implementadas, criterios de aceptación y el **diagrama UML actualizado**.
+Esta versión corresponde al **Prototipo 3 (Entrega Final)** del proyecto, que incluye las historias de usuario implementadas, criterios de aceptación, funcionalidades habilitadas, interfaz gráfica funcional y generación de base de datos local funcional.
 
 ---
 
