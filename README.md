@@ -72,21 +72,26 @@ Esta versión corresponde al **Prototipo 2 (Entrega 2)** del proyecto, que inclu
 - **IntelliJ IDEA** (Community o Ultimate)
 - Sistema operativo Windows, Linux o macOS
 
-## ⬇️ 1. Descarga y Uso (Usuarios Finales)
+##  1. Descarga y Uso (Usuarios Finales)
 
 Para utilizar la aplicación sin tener que compilar el código:
 
 ### Requisito
 * **Java Runtime Environment (JRE):** El usuario debe tener instalado Java 17 o superior para poder ejecutar el archivo `.jar`.
 
-### 📥 Descarga del Ejecutable
+###  Descarga del Ejecutable
 
 1.  Dirígete a la sección de **[Releases/Lanzamientos]** de este repositorio en GitHub.
 2.  Descarga el archivo ejecutable más reciente, que será un archivo **`.jar`** (`proyecto-poo.jar`).
 3.  Descarga el archivo iniciar.bat
-### 🚀 Ejecución
-
+###  Ejecución
+#### Opción 1
 1.  Guarda el archivo `.jar` y el archivo `.bat` en una carpeta de tu PC.
 2.  Haz doble clic en el archivo `inicar.bat`.
+3.  Si Java está configurado correctamente, la aplicación se iniciará inmediatamente.
+4.  La base de datos `gestion_salud.db` se creará automáticamente junto al archivo `.jar` la primera vez que se ejecute.
+#### Opción 2
+1.  Guarda el archivo `.jar` en una carpeta de tu PC.
+2.  Selecciona el archivo jar, dale click derecho, abrir con, selecciona java (Versión 17 o superior).
 3.  Si Java está configurado correctamente, la aplicación se iniciará inmediatamente.
 4.  La base de datos `gestion_salud.db` se creará automáticamente junto al archivo `.jar` la primera vez que se ejecute.
